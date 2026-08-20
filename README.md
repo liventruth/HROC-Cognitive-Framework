@@ -12,6 +12,17 @@ By integrating high-dimensional memory compression with entropy-routed multi-age
 
 ---
 
+## ⚠️ Enterprise & Commercial Licensing Notice
+
+The HROC framework and its underlying packages are **dual-licensed**:
+
+1. **Open Source (AGPLv3):** Free for non-commercial research, academic use, and open-source projects. *Note: The AGPLv3 license requires any network-accessible service using this software to open-source its entire backend application code.*
+2. **Commercial Enterprise License:** Required for proprietary commercial deployments, closed-source SaaS platforms, and enterprise data center infrastructure. Commercial licenses grant full rights without AGPLv3 copyleft restrictions, plus integration support.
+
+📥 **For Enterprise Licensing Inquiries:** inquiries@lawrencearchitectures.com
+
+---
+
 ## The Core Bottleneck
 
 Traditional multi-agent systems are fundamentally constrained by the "VRAM Wall." Passing massive Key-Value (KV) cache tensors between discrete agents consumes excessive bandwidth, forcing redundant computation and preventing high-parameter models from achieving real-time consensus on standard hardware.
@@ -48,11 +59,10 @@ Tested under live enterprise workloads on commodity hardware (Tesla T4 GPU):
 
 ---
 
-## Quickstart Deployment
+## 🚀 Quickstart (Universal Integration)
 
 The framework requires the installation of the core packages from PyPI:
 
 ```bash
 pip install ul-smf==1.0.0
 pip install psas-swarm==1.0.1
-
