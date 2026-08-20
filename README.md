@@ -64,5 +64,5 @@ Tested under live enterprise workloads on commodity hardware (Tesla T4 GPU):
 The framework requires the installation of the core packages from PyPI:
 
 ```bash
-pip install ul-smf==1.0.0
-pip install psas-swarm==1.0.1
+pip install ul-smf
+pip install psas-swarm
