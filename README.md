@@ -64,5 +64,16 @@ Tested under live enterprise workloads on commodity hardware (Tesla T4 GPU):
 The framework requires the installation of the core packages from PyPI:
 
 ```bash
-pip install ul-smf
-pip install psas-swarm
+## 🚀 Quickstart (Universal Integration)
+
+The framework requires the installation of the core packages from PyPI:
+
+```bash
+pip install ul-smf psas-swarm
+
+To run a closed-loop pipeline where high-dimensional memory compression feeds directly into the PSAS entropy router, use the following implementation:
+
+import torch
+from ul_smf import UniversalLatentBridge
+from psas_swarm import PhaseShiftedAgentRouter
+...
