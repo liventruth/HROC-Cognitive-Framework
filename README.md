@@ -63,17 +63,35 @@ Tested under live enterprise workloads on commodity hardware (Tesla T4 GPU):
 
 The framework requires the installation of the core packages from PyPI:
 
-```bash
-## 🚀 Quickstart (Universal Integration)
-
-The framework requires the installation of the core packages from PyPI:
-
-```bash
-pip install ul-smf psas-swarm
+    pip install ul-smf psas-swarm
 
 To run a closed-loop pipeline where high-dimensional memory compression feeds directly into the PSAS entropy router, use the following implementation:
 
-import torch
-from ul_smf import UniversalLatentBridge
-from psas_swarm import PhaseShiftedAgentRouter
-...
+    import torch
+    from ul_smf import UniversalLatentBridge
+    from psas_swarm import PhaseShiftedAgentRouter
+
+    # Set execution device
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    # 1. Load your compiled Aegis-KV oracle core binary and initialize UL-SMF
+    oracle_core = torch.jit.load("aegis_kv_oracle_core.pt", map_location=device)
+    oracle_core.eval()
+    ul_smf_bridge = UniversalLatentBridge(core_module=oracle_core)
+
+    # 2. Initialize the PSAS entropy-routed agentic verification swarm
+    psas_router = PhaseShiftedAgentRouter(device=device)
+
+    # 3. Simulate a massive enterprise KV cache tensor (e.g., 64k context window)
+    kv_cache_tensor = torch.randn(1, 32, 65536, 128, device=device, dtype=torch.float16)
+
+    # 4. Execute the HROC Closed-Loop Pipeline:
+    # Phase A: Compress high-dimensional memory via UL-SMF
+    reconstructed_cache, compressed_latents = ul_smf_bridge(kv_cache_tensor)
+
+    # Phase B: Route compressed latents through PSAS for cognitive verification & entropy checking
+    routing_decision = psas_router(compressed_latents)
+
+    print(f"[*] Compressed Latent Footprint : {compressed_latents.shape}")
+    print(f"[*] PSAS Cognitive Routing State: {routing_decision}")
+    
