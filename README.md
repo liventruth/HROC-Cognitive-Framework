@@ -1,13 +1,35 @@
-# HROC: Human-AI Restoration of Homeostasis & Cognition
-### Enterprise-Grade High-Context Memory Compression & Cognitive Verification Engine
+# NeuroPhoenix HROC: Human-AI Restoration of Homeostasis/Cognition
 
-[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](LICENSE)
-[![Architecture: UL-SMF + PSAS](https://img.shields.io/badge/Architecture-Discrete%20Latent%20Fabric-orange.svg)]()
-[![Status: Production Ready](https://img.shields.io/badge/Status-Enterprise%20Evaluation-green.svg)]()
+**Principal Architect:** Charles Clark Lawrence | **Lawrence Architectures** | **License:** AGPL-3.0 (Commercial Exemption Licensing Available)
 
-Modern multi-agent LLM systems hit a structural ceiling defined by two fatal bottlenecks: **The Memory Wall** (unmanageable KV-cache VRAM bloat at long horizons) and **Cognitive Entropy** (hallucination drift during multi-turn reasoning). 
+---
 
-**HROC** is a production-ready, closed-loop cognitive framework that unifies **UL-SMF (Universal Latent-State Memory Fabric)** and **PSAS (Phase-Shifted Agentic Swarm)** to eliminate VRAM overhead while enforcing strict deterministic verification.
+## Executive Summary
+
+The **NeuroPhoenix HROC** framework is an enterprise-grade cognitive architecture designed to eliminate multi-agent VRAM bottlenecks and sever physical/logical hallucinations in Large Language Models (LLMs) with near-zero latency.
+
+By integrating high-dimensional memory compression with entropy-routed multi-agent consensus, HROC allows hyperscalers, defense contractors, and AI infrastructure providers to deploy high-reliability physics and material science validation at a fraction of the computational cost of traditional swarm architectures.
+
+---
+
+## The Core Bottleneck
+
+Traditional multi-agent systems are fundamentally constrained by the "VRAM Wall." Passing massive Key-Value (KV) cache tensors between discrete agents consumes excessive bandwidth, forcing redundant computation and preventing high-parameter models from achieving real-time consensus on standard hardware.
+
+HROC solves this through a dual-package architectural pipeline:
+
+1. **UL-SMF (Universal Latent State Memory Fabric):** Intercepts raw LLM KV cache tensors and compresses them into a highly optimized latent space. This drastically reduces the VRAM footprint while preserving the semantic and mathematical integrity of the system state.
+2. **PSAS (Phase-Shifted Agentic Swarm):** A zero-latency cognitive engine that routes the compressed memory states through specialized validation nodes based strictly on systemic ambiguity (Shannon entropy).
+
+---
+
+## System Architecture
+
+The overarching awareness engine evaluates the mathematical chaos of the memory tensor and phase-shifts the cognitive load to one of three specialized agents:
+
+* **Agent Alpha (Strict Physics Anchor):** Triggered during low-entropy states. Validates strict thermodynamic, geometric, and continuum mechanics constraints.
+* **Agent Beta (Lateral Topology Probe):** Triggered during moderate-entropy states. Maps unusual acoustic, spatial, or geometric edge cases.
+* **Agent Gamma (Adversarial Filter):** Triggered during high-entropy states. Aggressively identifies and severs logical fallacies, physical impossibilities, and domain hallucinations (e.g., false electromechanical mapping).
 
 ---
 
@@ -26,35 +48,10 @@ Tested under live enterprise workloads on commodity hardware (Tesla T4 GPU):
 
 ---
 
-## 🏛️ Core Architectural Pillars
+## Quickstart Deployment
 
-### 1. UL-SMF (Universal Latent-State Memory Fabric)
-* **Discrete Latent Bottlenecking:** Utilizes advanced bounded quantization fabrics to compress high-dimensional temporal state spaces into ultra-dense latent registries.
-* **Sequence Agnosticism:** Dynamic tensor flattening and multi-scale pooling support arbitrary, variable context windows (from 1k to 128k+ tokens) without recompilation.
-* **Lossless Semantic Retention:** Preserves critical long-horizon context vectors while stripping redundant attention overhead.
+The framework requires the installation of the core packages from PyPI:
 
-### 2. PSAS (Phase-Shifted Agentic Swarm)
-* **Entropy Routing:** Dynamically routes ambiguous token states through specialized adversarial validation filters.
-* **Zero-Latency Truth Enforcement:** Intercepts and corrects physical and logical drift before errors propagate down the generation pipeline.
-
----
-
-## 📦 Repository Structure
-* `ul_smf/` — Open-source integration wrappers and tensor bridge plumbing.
-* `psas_swarm/` — Entropy routing and agentic verification logic.
-* `benchmarks/` — Hardware profiling scripts and verification harness templates.
-
----
-
-## 🔐 Enterprise Commercial Licensing & Secure Evaluation
-
-The open-source components (`ul-smf` and `psas`) are licensed under **AGPL-3.0** to ensure open development transparency. 
-
-For enterprise cloud providers, AI infrastructure companies, and defense-tech integrators requiring closed-source deployment of the **proprietary compiled Oracle Core weights (`.pt`)**:
-
-1. **Secure Sandbox Access:** Request a restricted API key to our staging evaluation environment to test your custom long-context workloads against the live engine.
-2. **On-Premises POC:** Qualified enterprises can request hardware-fingerprinted evaluation containers governed by a mutual NDA.
-
-To initiate a commercial licensing agreement or technical due diligence discussion, contact:  
-**Lawrence Architectures** — Enterprise Licensing Division  
-[Insert Professional Contact Email / Website Link]
+```bash
+pip install ul-smf==1.0.0
+pip install psas-swarm==1.0.2
