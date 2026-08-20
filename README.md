@@ -54,4 +54,5 @@ The framework requires the installation of the core packages from PyPI:
 
 ```bash
 pip install ul-smf==1.0.0
-pip install psas-swarm==1.0.2
+pip install psas-swarm==1.0.1
+
